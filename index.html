@@ -1,137 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Framework Design</title>
-  </head>
-  
-  
-  
-  <body class="bg-black text-gray-200 w-2/3 mx-auto">
-    <section class="mb-24">
-      <div class="text-center mb-8">
-        <h2 class="text-4xl mb-6 mt-12">Features</h2>
-        <p class="text-lg">
-          Most calendars are designed for teams, Slate is designed for
-          freelancers who want to simple way to scheduale.
-        </p>
-      </div>
+</head>
 
-      <img class="mb-8" src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="" />
+<body class="">
 
+    <!-- Navigation -->
 
-      <div class="mb-10">
-        <h3 class="mb-4 text-xl"><span class="text-3xl mr-3"><i class="fas fa-utensils"></i></span> A single source of truth </h3>
-        <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
-      </div>
+    <div class="header--colour ">
+        <nav class="relative px-4 py-4 flex justify-around items-center container mx-auto md:mb-20">
+            <a href="" class="text-3xl font-bold leading-none">
+                <img src="/assets/img/logo-dark.png" alt="">
+            </a>
 
-      <div class="mb-10">
-        <h3 class="mb-4 text-xl"><span class="text-3xl mr-3"><i class="fab fa-reddit-alien"></i></span> A single source of truth</h3>
-        <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
-      </div>
+            <a href="" class="lg:hidden border border-white ml-10 px-8 py-2 md:px-12 text-white">Login</a>
 
-      <div class="mb-10">
-        <h3 class="mb-4 text-xl"><span class="text-3xl mr-3"><i class="fas fa-infinity"></i></span> A single source of truth</h3>
-        <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
-      </div>
-    </section>
-    
-    <section>
-      <div class="text-center mb-8">
-        <h2 class="text-4xl mb-6 mt-12">Contents</h2>
-        <p class="text-lg">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-      </div>
-
-      <div class="bg-white rounded text-center px-10 py-8 mb-14">
-        <h3 class="text-black mb-5">Work</h3>
-        <p class="text-black mb-5">Ever wondered if you're too reliant on a client for work? Slate helps you identify.</p>
-        <button class="bg-blue-600 py-2 px-8 mb-8">Sign up</button>
-        
-        <img class="" src="https://www.figma.com/file/yGOW4jdisy33Xdlf2uXjvQ/developer_test?node-id=62%3A2653" alt=""/>
-      </div>
-
-            <div class="bg-white rounded text-center px-10 py-8 mb-14">
-              <h3 class="text-black mb-5">Work</h3>
-              <p class="text-black mb-5">Ever wondered if you're too reliant on a client for work? Slate helps you identify.</p>
-              <button class="bg-blue-600 py-2 px-8 mb-8">Sign up</button>
-              <img class=""
-                src="https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt="" />
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-blue-600 p-3">
+                    <svg width="44" height="27" viewBox="0 0 44 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 0.25H44V4.66667H0V0.25ZM11 11.2917H44V15.7083H11V11.2917ZM24.75 22.3333H44V26.75H24.75V22.3333Z"
+                            fill="white" />
+                    </svg>
+                </button>
             </div>
-    </section>
 
-    <section class="mb-64 flex flex-col justify-center">
-            <div class="text-center mb-8">
-              <h2 class="text-4xl mb-6 mt-12">Gallery</h2>
-              <p class="text-lg">We focus on ergonomics and meetingyou where you work. It's only a keystroke away.</p>
+            <ul
+                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <li>
+                    <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a>
+                </li>
+
+                <li>
+                    <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Product</a>
+                </li>
+
+                <li>
+                    <a class="text-sm text-gray-400 hover:text-gray-500" href="#">About</a>
+                </li>
+
+                <li>
+                    <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 border border-gray-400 md:px-10 md:py-2 text-white hover:bg-black text-sm  font-bold transition duration-500"
+                href="#">Login</a>
+        </nav>
+
+        <div class="navbar-menu relative z-50 hidden">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav
+                class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <img src="/assets/img/logo.png" alt="">
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Home</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Product</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">About</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="mt-auto">
+                    <div class="pt-6">
+                        <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+                            href="#">Login</a>
+
+                    </div>
+                    <p class="my-4 text-xs text-center text-gray-400">
+                        <span>Copyright © 2021</span>
+                    </p>
+                </div>
+            </nav>
+        </div>
+
+        <!-- header -->
+
+        <section class="w-full text-gray-200">
+            <div class="w-4/5 md:w-2/3 mx-auto text-center">
+                <h1 class="text-6xl font-light my-8 mx-4 md:text-7xl lg:text-8xl md:font-semibold md:mx-">Work at the
+                    speed of
+                    thought.
+                </h1>
+                <p class="b-8 font-light mb-8 mx-4 md:mb-16 md:text-xl md:w-3/5 md:mx-auto">Most calendars are designed
+                    for teams. Slate is designed for
+                    freelancers who want a simple way to plan their schedule.</p>
+
+
+                <div class=" mx-auto flex flex-col md:flex-row inline-flex">
+                    <a class="mb-6 md:mr-6" href>
+                        <span
+                            class="h-12 md:h-14 primary-btn flex text-white items-center justify-center px-8 border border-blue-700 hover:bg-black hover:text-white transition duration-500 ease-in-out">Try
+                            For Free
+                        </span>
+                    </a>
+
+                    <a class="inline-flex mb-8" href>
+                        <span
+                            class="h-12 md:h-14 flex items-center justify-center text-white px-8 border border-gray-400 hover:bg-black hover:text-white transition duration-500 ease-in-out">Learn
+                            More
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="">
-            <img class="mb-6 rounded-xl"
-              src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
-              alt="" />
 
-              <img class="mb-6 rounded-xl"
-                src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
-                alt="" />
+            <div class=" mx-auto">
+                <div class="w-full flex justify-center">
+                    <img class="md:hidden" src="/assets/img/screens-mobile.png" alt="">
+                </div>
 
-                <img class="mb-6 rounded-xl"
-                  src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
-                  alt="" />
+                <section class="w-full relative container mx-auto hidden md:block">
+                    <img class="" src="/assets/img/screens.png" alt="">
+                </section>
 
-                  <img class="mb-6 rounded-xl"
-                    src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
-                    alt="" />
-              </div>
+                <section
+                    class="bg-gradient-to-b from-transparent via-trueGray-600 to-black w-full h-40 relative z-10 hidden md:block">
+                </section>
+            </div>
+        </section>
 
-              <button class="border-2 border-white py-2 px-8">See more</button>
+        <!-- Feature -->
+        <div class="secondary-bg pt-24">
+            <section class="w-full md:w-3/5 mx-auto text-gray-200 mb-24 md:mb-40">
+                <div class="w-4/5 mx-auto text-center md:mb-16">
+                    <h2 class="text-5xl mb-6 font-light tracking-wider md:text-6xl uppercase">features</h2>
+                    <p class="text-lg  md:mx-auto md:text-xl">
+                        Most calendars are designed for teams, Slate is designed for
+                        freelancers who want to simple way to scheduale.
+                    </p>
+                </div>
+                <div class="lg:flex lg:items-center">
+                    <div class="flex justify-center w-full mb-8" data-aos="fade-up">
+                        <img class="md:hidden" src="assets/img/frame.png" alt="">
+                        <img class="hidden md:block" src="assets/img/large-frame.png" alt="">
+                    </div>
 
-    </section>
 
 
-<footer class="mt-12">
-  <ul class="mb-10">
-    <h1 class="mb-4">Fingertip</h1>
-    <li>Home</li>
-    <li>Examples</li>
-    <li>Pricing</li>
-    <li>Updates</li>
-  </ul>
+                    <div class="w-3/5 md:w-4/5 lg:w-3/5 mx-auto">
+                        <div class="mb-12 mx-8" data-aos="fade-up">
+                            <div class="flex items-center mb-6 md:mb-8">
+                                <svg class="h-8 w-8 mr-3" width="29" height="30" viewBox="0 0 26 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.14636 13.6089L10.9197 9.83554L2.66636 1.59554C2.02636 0.955542 0.919691 1.12888 0.519691 1.95554C-0.426976 3.94221 -0.0803094 6.38221 1.55969 8.03554L7.14636 13.6089ZM16.1864 11.1955C18.2264 12.1422 21.093 11.4755 23.213 9.35554C25.7597 6.80887 26.253 3.15554 24.293 1.19554C22.3464 -0.751124 18.693 -0.271124 16.133 2.27554C14.013 4.39554 13.3464 7.26221 14.293 9.30221L2.21302 21.3822C1.96372 21.6315 1.82366 21.9696 1.82366 22.3222C1.82366 22.6748 1.96372 23.0129 2.21302 23.2622C2.46233 23.5115 2.80046 23.6516 3.15302 23.6516C3.50559 23.6516 3.84372 23.5115 4.09302 23.2622L12.3464 15.0355L20.5864 23.2755C20.7098 23.399 20.8563 23.4969 21.0176 23.5637C21.1789 23.6305 21.3518 23.6649 21.5264 23.6649C21.7009 23.6649 21.8738 23.6305 22.0351 23.5637C22.1964 23.4969 22.3429 23.399 22.4664 23.2755C22.5898 23.1521 22.6877 23.0055 22.7545 22.8443C22.8213 22.683 22.8557 22.5101 22.8557 22.3355C22.8557 22.161 22.8213 21.9881 22.7545 21.8268C22.6877 21.6655 22.5898 21.519 22.4664 21.3955L14.2264 13.1555L16.1864 11.1955Z"
+                                        fill="#02E4C0" />
+                                </svg>
 
-  <ul class="mb-10">
-    <h1 class="mb-4">Resources</h1>
-    <li>Home</li>
-    <li>Examples</li>
-    <li>Pricing</li>
-    <li>Updates</li>
-  </ul>
+                                <h3 class="text-xl md:text-2xl font-medium"><span class="">A single source of truth</h3>
+                            </div>
 
-  <ul class="mb-10">
-    <h1 class="mb-4">About</h1>
-    <li>Home</li>
-    <li>Examples</li>
-    <li>Pricing</li>
-    <li>Updates</li>
-  </ul>
+                            <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
+                        </div>
 
-  <div>
-    <div>
-      <i class="fas fa-mobile-alt"></i>
-      <i class="fas fa-map-marker-alt"></i>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin"></i>
+                        <div class="mb-12 mx-8" data-aos="fade-up">
+                            <div class="flex items-center mb-6 md:mb-8">
+                                <svg class="h-8 w-8 mr-3" width="29" height="30" viewBox="0 0 29 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.0495 13.395C13.5285 15.855 13.311 18.75 11.542 19.92C9.773 21.06 7.134 19.995 5.6405 17.535C4.1615 15.075 4.3935 12.15 6.1625 11.01C7.9315 9.87 10.5705 10.935 12.0495 13.395ZM14.5 23.625C17.4 23.625 18.125 22.5 18.125 22.5C18.125 22.5 17.4 25.5 14.5 25.5C11.6 25.5 10.875 22.545 10.875 22.5C10.875 22.5 11.6 23.625 14.5 23.625ZM22.8375 11.01C24.6065 12.15 24.8385 15.075 23.3595 17.535C21.866 19.995 19.227 21.06 17.458 19.92C15.689 18.75 15.4715 15.855 16.9505 13.395C18.4295 10.935 21.0685 9.87 22.8375 11.01ZM14.5 27C18.125 27 26.1 19.29 26.1 13.5C26.1 7.71 20.8945 3 14.5 3C8.1055 3 2.9 7.71 2.9 13.5C2.9 19.29 10.875 27 14.5 27ZM14.5 0C22.475 0 29 6.06 29 13.5C29 19.62 20.764 30 14.5 30C8.236 30 0 19.62 0 13.5C0 6.06 6.525 0 14.5 0Z"
+                                        fill="#02E4C0" />
+                                </svg>
+
+                                <h3 class=" text-xl md:text-2xl font-medium"><span class="">Intuative interface</h3>
+
+                            </div>
+                            <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
+                        </div>
+
+                        <div class="mx-8" data-aos="fade-up">
+                            <div class="flex items-center mb-6 md:mb-8">
+                                <svg class="mr-2" width="41" height="19" viewBox="0 0 41 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.775 4.03437e-05C29.315 4.03437e-05 26.9917 0.988885 25.3346 2.70171L13.325 13.7203C12.2317 14.8504 10.7796 15.4684 9.225 15.4684C6.03042 15.4684 3.41667 12.8021 3.41667 9.50002C3.41667 6.19798 6.03042 3.53163 9.225 3.53163C10.7796 3.53163 12.2317 4.14966 13.3933 5.3504L15.3238 7.1162L17.9375 4.75003L15.7508 2.79C14.8953 1.90238 13.8782 1.19881 12.7581 0.719939C11.6379 0.241065 10.4371 -0.0036143 9.225 4.03437e-05C4.13417 4.03437e-05 0 4.27327 0 9.50002C0 14.7268 4.13417 19 9.225 19C11.685 19 14.0083 18.0112 15.6654 16.2983L27.675 5.27977C28.7683 4.14966 30.2204 3.53163 31.775 3.53163C34.9696 3.53163 37.5833 6.19798 37.5833 9.50002C37.5833 12.8021 34.9696 15.4684 31.775 15.4684C30.2375 15.4684 28.7683 14.8504 27.6067 13.6496L25.625 11.8662L23.0625 14.2324L25.2492 16.21C26.107 17.0932 27.125 17.7927 28.2448 18.2684C29.3646 18.7442 30.5643 18.9868 31.775 18.9823C36.8658 18.9823 41 14.7268 41 9.50002C41 4.20263 36.8658 4.03437e-05 31.775 4.03437e-05Z"
+                                        fill="#02E4C0" />
+                                </svg>
+
+                                <h3 class="text-xl md:text-2xl font-medium"><span class="">Or with rules</h3>
+                            </div>
+                            <p>When you add work to your Slate calendar we automatically calculate useful insights</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contents -->
+
+            <section class="w-2/3 md:w-3/5 mx-auto leading-relaxed mb-24">
+                <div class="text-center text-gray-200 mb-12">
+                    <h2 class="text-5xl md:text-5xl mb-6 font-light tracking-wider">Contents</h2>
+                    <p class="text-lg md:w-3/5 md:mx-auto md:text-xl">We focus on ergonomics and meeting you where you
+                        work. It's only a keystroke
+                        away.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row">
+                    <div class="bg-white rounded-xl text-center px-10 lg:px-10 pt-8 md:pt-12 md:mr-8 mb-8 md:mb-6"
+                        data-aos="fade-up">
+                        <h3 class="mb-5 font-semibold md:text-xl">Work</h3>
+                        <p class="text-gray-400 mb-5 md:mx-12 md:mb-10">Ever wondered if you're too reliant on a client
+                            for work?
+                            Slate
+                            helps
+                            you
+                            identify.
+                        </p>
+                        <button
+                            class="primary-btn text-white py-2 px-8 mb-8 md:mb-16 hover:bg-black hover:text-white transition duration-500 ease-in-out border-2 border-blue-700">Sign
+                            up</button>
+
+                        <img class="w-full mb-8" src="/assets/img/macbook.png" alt="" />
+                    </div>
+
+                    <div class="bg-white rounded-xl text-center md:px-10 lg:px-0 pt-8 md:pt-12 md:mr-8 mb-8 md:mb-6"
+                        data-aos="fade-up">
+                        <h3 class="text-black font-semibold mb-5 md:mx-12 md:text-xl">Design with real data</h3>
+                        <p class="text-gray-400 mb-5 md:mx-8 md:mx-16 md:mb-8 px-10">Ever wondered if you're too reliant
+                            on a
+                            client for
+                            work?
+                            Slate
+                            helps
+                            you
+                            identify.
+                        </p>
+                        <button
+                            class="primary-btn text-white hover:bg-black hover:text-white transition duration-500 ease-in-out py-2 px-8 md:mb-8 border-2 border-blue-700">Try
+                            For Free</button>
+                        <img class="w-full md:hidden" src="/assets/img/border.png" alt="" />
+                        <img class="w-full hidden md:block" src="/assets/img/boards-lg.png" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery -->
+
+            <section class="w-2/3 md:w-3/5  mx-auto text-gray-100 flex flex-col justify-center mb-32">
+                <div class="text-center mb-8">
+                    <h2 class="text-5xl md:text-6xl tracking-wider mb-6 mt-12">Gallery</h2>
+                    <p class="text-lg md:text-xl md:w-2/3 lg:w-3/5 mx-auto">We focus on ergonomics and meeting you where
+                        you work.
+                        It's only a keystroke away.
+                    </p>
+                </div>
+                <div class="md:hidden">
+                    <img class="mb-1 rounded-xl" src="/assets/img/headset.png" alt="" data-aos="fade-up" />
+
+                    <img class="mb-1 rounded-xl" src="/assets/img/handslap.png" alt="" data-aos="fade-up" />
+
+                    <img class="mb-1 rounded-xl" src="assets/img/drone.png" alt="" data-aos="fade-up" />
+
+                    <img class="mb-1 rounded-xl " src="assets/img/laptopis.png" alt="" data-aos="fade-up" />
+
+                </div>
+
+                <div class="hidden md:block md:w-container mx-auto">
+                    <div class="flex flex-wrap overflow-hidden mb-4">
+
+                        <div class="w-full overflow-hidden md:w-1/4 lg:w-1/3 xl:w-1/4">
+                            <img class="rounded-xl" src="/assets/img/drone-large.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                        <div class="w-full overflow-hidden md:w-1/4 lg:w-1/3 xl:w-1/4">
+                            <img class="rounded-xl" src="/assets/img/ipad.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                        <div class="w-full overflow-hidden md:w-1/4 lg:w-1/3 xl:w-1/4">
+                            <img class="rounded-xl" src="assets/img/meeting.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                        <div class="w-full overflow-hidden md:w-1/4 lg:w-1/3 xl:w-1/4">
+                            <img class="rounded-xl " src="assets/img/mac-setup.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-wrap overflow-hidden mb-12">
+
+                        <div class="overflow-hidden md:w-1/3">
+                            <img class="rounded-xl " src="assets/img/code-laptop.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                        <div class="overflow-hidden md:w-1/3 flex justify-center">
+                            <img class="rounded-xl" src="assets/img/surfacepro.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                        <div class="overflow-hidden md:w-1/3">
+                            <img class="rounded-xl" src="assets/img/camera.png" alt="" data-aos="fade-up" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex flex-col inline-flex mx-auto ">
+                    <a class="mb-6" href="test.html">
+                        <span
+                            class="flex text-white items-center justify-center px-10 py-3 border border-white-700 hover:bg-black hover:text-white transition duration-500 ease-in-out">
+                            See more
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Partners -->
+
+            <section class="w-full mx-auto text-center text-gray-200 mb-32">
+                <div class="w-4/5 mx-auto">
+                    <h1 class="text-5xl md:text-6xl tracking-wider font-light my-8">Partners</h1>
+                    <p class="font-light mb-8 md:w-2/3 lg:w-1/3 mx-auto text-center md:text-xl ">We focus on ergonomics
+                        and meeting you where you work.
+                        It's only a keystroke away.</p>
+                </div>
+
+                <div class="grid grid-cols-3 md:grid-cols-6 flex overflow-hidden w-4/5 md:w-1/2 mx-auto mb-8 items-center"
+                    data-aos="fade-up">
+                    <div class="my-2 px-2 mr-1 md:mr-4 overflow-hidden mb-6">
+                        <img class="" src="/assets/img/logos_apple-app-store.png" alt="">
+                    </div>
+
+                    <div class="my-2 px-2 mr-2 md:mr-0 overflow-hidden mb-6">
+                        <img class="" src="/assets/img/logos_apiary.png" alt="">
+                    </div>
+
+                    <div class="my-2 px-2 mr-2 md:mr-0 overflow-hidden mb-6">
+                        <img class="" src="/assets/img/logos_android-icon.png" alt="">
+                    </div>
+
+                    <div class="my-2 px-2 mr-2 md:mr-0 overflow-hidden">
+                        <img class="" src="/assets/img/logos_basecamp.png" alt="">
+                    </div>
+
+                    <div class="my-2 px-2 mr-2 md:mr-0 overflow-hidden">
+                        <img class="" src="/assets/img/logos_airbnb.png" alt="">
+                    </div>
+
+                    <div class="my-2 px-2 mr-2 overflow-hidden">
+
+                        <img class="" src="/assets/img/logos_ibm.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="flex flex-col inline-flex mx-auto">
+                    <a class="mb-6" href="#">
+                        <span
+                            class="flex text-white items-center justify-center px-10 py-3 border border-white-700 hover:bg-black hover:text-white transition duration-500 ease-in-out">
+                            All Partners
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+
+
+            <!-- Testimonials -->
+
+            <h1 class="text-5xl md:text-6xl text-gray-200 font-light text-center tracking-wide ">Testimonials</h1>
+
+            <div class="swiper md:hidden text-gray-200">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="md:w-1/2 md:px-4 mt-6 md:mt-0 w-2/3">
+                            <div
+                                class="testimonial p-6 border-2 border-gray-400 rounded-xl border-solid hover:border-gray-500 transition-colors duration-300">
+                                <div class="flex items-center mb-3">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/claire.png" alt="Claire Bell"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold">Claire Bell</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-light text-gray-300">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="md:w-1/2 md:px-4 mt-6 md:mt-0 w-2/3">
+                            <div
+                                class="testimonial p-6 border-2 rounded-xl border-solid border-gray-400 hover:border-gray-500 transition-colors duration-300">
+                                <div class="flex items-center mb-3">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/francisco.png" alt="Francisco Lane"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold">Francisco Lane</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="md:w-1/2 md:px-4 mt-6 md:mt-0 w-2/3">
+                            <div
+                                class="testimonial p-6 border-2 rounded-xl border-solid border-gray-400 hover:border-gray-500 transition-colors duration-300">
+                                <div class="flex items-center mb-3">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/ralph.png" alt="Ralph Fisher"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold">Ralph Fisher</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="md:w-1/2 md:px-4 mt-6 md:mt-0 w-2/3">
+                            <div
+                                class="testimonial p-6 border-2 rounded-xl border-solid border-gray-400 hover:border-gray-500 transition-colors duration-300">
+                                <div class="flex items-center mb-3">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/jorge.png" alt="Jorge Murphy"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold uppercase">Jorge Murphy</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+
+
+
+
+            <div class="testimonial-1 py-4 md:py-12 w-4/5 md:w-3/5 mx-auto text-gray-200 hidden md:block">
+                <div class="container mx-auto px-4">
+                    <div class="md:flex md:flex-wrap md:-mx-4 mb-4">
+
+                        <div class="md:w-1/2 md:px-2 mt-6 md:mt-0" data-aos="fade-right">
+                            <div
+                                class="testimonial p-10 border-2 rounded-xl border-solid hover:border-gray-800 transition-colors duration-300">
+                                <div class="flex mb-3 items-center">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/claire.png" alt="Claire Bell"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold uppercase">Claire Bell</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 md:px-2 mt-6 md:mt-0" data-aos="fade-left">
+                            <div
+                                class="testimonial p-10 border-2 rounded-xl border-solid hover:border-gray-800  transition-colors duration-300">
+                                <div class="flex mb-3 items-center">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/francisco.png" alt="Francisco Lane"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold uppercase">Francisco Lane</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="md:w-1/2 md:px-2 mt-6 md:mt-4" data-aos="fade-right">
+                            <div
+                                class="testimonial p-10 border-2 rounded-xl border-solid hover:border-gray-800  transition-colors duration-300">
+                                <div class="flex mb-3 items-center">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/ralph.png" alt="Ralph Fisher"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold uppercase">Ralph Fisher</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 md:px-2 mt-6 md:mt-4" data-aos="fade-left">
+                            <div
+                                class="testimonial p-10 border-2 rounded-xl border-solid hover:border-gray-800  transition-colors duration-300">
+                                <div class="flex mb-3 items-center">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0"
+                                        src="/assets/img/jorge.png" alt="Jorge Murphy"
+                                        class="w-full h-full object-cover">
+                                    <div class="flex flex-col">
+                                        <h1 class="font-bold uppercase">Jorge Murphy</h1>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="">Slate helps you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year. Slate helps
+                                        you see how many more days
+                                        you need to work to reach your financial
+                                        goal for the month and year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- linegraph -->
+
+        <section class="w-full mx-auto text-gray-200 my-24 md:flex md:w-3/5 rounded-xl md:items-center md:bg-zinc-700">
+            <div class="w-3/5 flex flex-col justify-center md:flex-none mx-auto mb-12 md:w-2/5 ">
+                <h1 class="text-5xl font-light my-8  text-center md:text-left tracking-wide md:mx-0">OpenType
+                    features
+                    and Variable fonts</h1>
+                <div class="mx-auto md:mx-0 flex flex-col md:flex-row inline-flex">
+                    <a class="mb-6 md:mr-6" href="#">
+                        <span
+                            class="h-12 primary-btn flex text-white items-center justify-center px-8 border border-blue-700 hover:bg-black hover:text-white transition duration-500 ease-in-out">Try
+                            For Free
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <img class="w-4/5 mx-auto md:w-1/3 md:pt-4 md:-mr-1" src="/assets/img/Line-chart.png" data-aos="fade-up"
+                alt="">
+        </section>
+
+        <!-- footer -->
+
+        <footer class="mt-12 w-2/3 mx-auto text-gray-200 md:flex md:justify-between">
+            <ul class="mb-14">
+                <h1 class="mb-8 text-xl tracking-wider">Fingertip</h1>
+                <li class="mb-2"><a href="#" class="hover:underline">Home</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Examples</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Pricing</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Updates</a></li>
+            </ul>
+
+            <ul class="mb-14">
+                <h1 class="mb-8 text-xl tracking-wider">Resources</h1>
+                <li class="mb-2"><a href="#" class="hover:underline">Home</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Examples</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Pricing</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Updates</a></li>
+            </ul>
+
+            <ul class="mb-14">
+                <h1 class="mb-8 text-xl tracking-wider">About</h1>
+                <li class="mb-2"><a href="#" class="hover:underline">Home</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Examples</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Pricing</a></li>
+                <li class="mb-2"><a href="#" class="hover:underline">Updates</a></li>
+            </ul>
+
+            <div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-map-marker-alt mr-3 text-3xl"></i>
+                    <address>7480 Mockingbird Hill undefined</address>
+                </div>
+
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-mobile-alt mr-3 text-3xl"></i>
+                    <p>(239) 555-0108</p>
+                </div>
+
+                <div class="text-3xl pb-16 ">
+                    <i class="fab fa-facebook-square mr-3 hover:text-4xl cursor-pointer"></i>
+                    <i class="fab fa-twitter mr-3 hover:text-4xl cursor-pointer"></i>
+                    <i class="fab fa-linkedin mr-3 hover:text-4xl cursor-pointer"></i>
+                </div>
+            </div>
+        </footer>
     </div>
-  </div>
-</footer>
-  </body>
+
+    <script src="/assets/js/framework.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>const swiper = new Swiper('.swiper', {
+            // Optional parameters
+
+            loop: true,
+
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });</script>
+</body>
+
 </html>
-
-
-
-<i class=""></i>
-
-<i class=""></i>
